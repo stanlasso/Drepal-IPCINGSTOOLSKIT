@@ -150,7 +150,7 @@ def Matrix():
             intercep = pd.merge(MatrixVarscan, MatrixBcftools, how="inner")
             result=intercep.iloc[:,:-1].assign(POSITION2=intercep['POSITION'])
             result.to_csv('APP/data/intercep/listposition.bed',sep='\t',header=False,index=False)
-            if Path("APP/data/variants.bcftools/Filterring/all.vcf").is_file() == True:
+            if Path("APP/data/variants.bcftools/Filterring/01.vcf").is_file() == True:
                 intersectVcf=["bash APP/bashScripts/intersect.sh"]
                 intersect = subprocess.Popen(intersectVcf, stdout=subprocess.PIPE, text=True, shell=True)
                 outinter, errinter = intersect.communicate()

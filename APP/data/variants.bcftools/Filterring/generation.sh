@@ -60,18 +60,18 @@ do
 
 done
 
-bcftools merge --force-samples APP/data/variants.bcftools/Filterring/*filtered_snps.vcf.gz > APP/data/variants.bcftools/Filterring/all.vcf
-bcftools view APP/data/variants.bcftools/Filterring/all.vcf | bcftools query -f '%CHROM\t%POS\t%REF\n' >> APP/data/variants.bcftools/Filterring/Allsnps.tsv
-sort +1 -n APP/data/variants.bcftools/Filterring/Allsnps.tsv | uniq >> APP/data/variants.bcftools/Filterring/Allsnps_sorted.tsv
+bcftools merge --force-samples APP/data/variants.bcftools/Filterring/*filtered_snps.vcf.gz > APP/data/variants.bcftools/Filterring/01.vcf
+bcftools view APP/data/variants.bcftools/Filterring/01.vcf | bcftools query -f '%CHROM\t%POS\t%REF\n' >> APP/data/variants.bcftools/Filterring/01snps.tsv
+sort +1 -n APP/data/variants.bcftools/Filterring/01snps.tsv | uniq >> APP/data/variants.bcftools/Filterring/01snps_sorted.tsv
 
-cut -f 1 APP/data/variants.bcftools/Filterring/Allsnps_sorted.tsv >> APP/data/variants.bcftools/Filterring/Chromosones.tsv
-cut -f 2 APP/data/variants.bcftools/Filterring/Allsnps_sorted.tsv >> APP/data/variants.bcftools/Filterring/Positions.tsv
-cut -f 3 APP/data/variants.bcftools/Filterring/Allsnps_sorted.tsv >> APP/data/variants.bcftools/Filterring/References.tsv
+cut -f 1 APP/data/variants.bcftools/Filterring/01snps_sorted.tsv >> APP/data/variants.bcftools/Filterring/Chromosones.tsv
+cut -f 2 APP/data/variants.bcftools/Filterring/01snps_sorted.tsv >> APP/data/variants.bcftools/Filterring/Positions.tsv
+cut -f 3 APP/data/variants.bcftools/Filterring/01snps_sorted.tsv >> APP/data/variants.bcftools/Filterring/References.tsv
 
 
 sed -i '1iPOSITION' APP/data/variants.bcftools/Filterring/Positions.tsv
 sed -i '1iREFERENCE' APP/data/variants.bcftools/Filterring/References.tsv
 sed -i '1iCHROMOSOME' APP/data/variants.bcftools/Filterring/Chromosones.tsv
 
-paste APP/data/variants.bcftools/Filterring/Chromosones.tsv APP/data/variants.bcftools/Filterring/Positions.tsv APP/data/variants.bcftools/Filterring/References.tsv >> APP/data/variants.bcftools/Filterring/MATRICE/Allsnps_data.tsv
+paste APP/data/variants.bcftools/Filterring/Chromosones.tsv APP/data/variants.bcftools/Filterring/Positions.tsv APP/data/variants.bcftools/Filterring/References.tsv >> APP/data/variants.bcftools/Filterring/MATRICE/01snps_data.tsv
 

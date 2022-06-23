@@ -13,6 +13,10 @@ rm -rf APP/data/variants.bcftools/*.vcf
 rm -rf APP/data/variants.varscan/*.vcf
 rm -rf APP/data/variants.bcftools/Filterring/MATRICE/*
 rm -rf APP/data/variants.bcftools/Filterring/MatriceSNPS/*
+rm -rf APP/data/variants.bcftools/Filterring/*.tsv
+rm -rf APP/data/variants.bcftools/Filterring/*.gz
+rm -rf APP/data/variants.bcftools/Filterring/*.tbi
+rm -rf APP/data/variants.bcftools/Filterring/*.bed
 rm -rf APP/data/Sam/*.sam
 rm -rf APP/data/Datafastq/*.fastq
 rm -rf APP/data/variants.varscan/*.mpileup

@@ -59,7 +59,6 @@ This APP requires conda to be installed and available on the system.
 To do this install conda via the miniconda installers found [here](https://docs.conda.io/en/latest/miniconda.html) and instructions [here](https://docs.conda.io/projects/continuumio-conda/en/latest/user-guide/install/index.html).
  
 
-#### Linux
 
   To obtain the installer for linux use the following:
 ```
@@ -70,19 +69,6 @@ wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 
 ```
 sh Miniconda3-latest-Linux-x86_64.sh
-```
-
-#### MacOS
-
-  To obtain the installer for MacOS, you can [download](https://docs.conda.io/en/latest/miniconda.html) it manually or use wget:
-```
-wget https://repo.continuum.io/miniconda/Miniconda3-latest-MacOSX-x86_64.sh
-```
-
-  Then, install miniconda,
-
-```
-sh Miniconda3-latest-MacOSX-x86_64.sh
 ```
 
 ### 4. Make Bioinfo ENV and install sickle

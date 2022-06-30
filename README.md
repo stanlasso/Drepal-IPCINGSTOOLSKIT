@@ -10,9 +10,8 @@ IPCINGSTOOLKIT was developed to aid in the analysis of next generation sequencin
 * Extract unmapped/unaligned reads.
 * Visualize the part of each element in the sequence 
 * Split bam files into forward and reverse reads.
-* Generate VCF file
+* Generate VCF file for multiple technology
 * Get SNPs Matrix
-* Annotated Variants [in process]
 * Export and Clean Directory
 
 
@@ -110,9 +109,9 @@ virtualenv myenv
 ```
 source myenv/bin/activate
 ```
-- install packages with requirment.txt
+- install packages with requirments.txt
 ```
-pip install -r requirment.txt
+pip install -r requirments.txt
 ```
 ### 6. Run APP
 ```
@@ -120,8 +119,7 @@ streamlit run APP/app.py --server.maxUploadSize=4200
 
 ```
 ### 7. Open Web Browser and Paste addresse
-*localhost:xxxx 
-- xxxx is a default port 
+*localhost:8501 
 
 # Contributions
 

@@ -105,7 +105,9 @@ streamlit run APP/app.py --server.maxUploadSize=4200
 
 ```
 ### 7. Open Web Browser and Paste addresse
+```
 localhost:8501 
+```
 
 # Contributions
 
